@@ -1,0 +1,106 @@
+.menu {
+	width: 40%;
+	text-align: center;
+	margin: 0 auto;
+	background: gray;
+	padding: 15px 0;
+	opacity: 0.9;
+	font-family: arial black;
+	position: fixed;
+	right: 450px;
+	top: 0;
+}
+
+.menu a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	width: 150px;
+}
+
+.menu a:hover {
+	color: black;
+}
+
+
+.game {
+	display: inline-block;
+	width: 25%;
+	padding: 15px;
+	vertical-align: middle;
+}
+
+.game img{
+	width: 100%;
+	box-shadow: 0 0 10px black;
+	height: 250px;
+}
+
+#top ,#history, #Галерея {
+	text-align: center;
+	margin-top: 70px;
+}
+
+.middle {
+	width: 30%;
+}
+
+.game a {
+	text-decoration: none;
+	background: gray;
+	padding: 10px 15px;
+	display: inline-block;
+	color: white;
+	margin-top: 10px;
+	font-family: arial black
+}
+
+.game a:hover {
+	background: lightgray;
+}
+
+.game p , .hgame h3 {
+	font-size: 25px;
+	font-family: arial black;
+}
+
+h2 {
+	font-family: arial black;
+}
+
+.hgame {
+	width: 85%;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+.hgame a {
+	background: gray;
+	color: white;
+	text-decoration: none;
+	padding: 5px 10px;
+	display: inline-block;
+	position: relative;
+	left: 1158px;
+	font-family: arial black;
+}
+
+.hgame a:hover {
+	background: lightgray;
+}
+
+.hgame p {
+	font-size: 20px;
+	font-family: marlett;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-image: url(img/1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
