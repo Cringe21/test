@@ -28,7 +28,7 @@
 	display: inline-block;
 	color: white;
 	margin-top: 10px;
-	font-family: arial black
+	font-family: arial black;
 }
 
 .game a:hover {
@@ -47,7 +47,8 @@ h2 {
 .hgame {
 	width: 85%;
 	margin: 0 auto;
-	text-align: justify;
+	text-align: justify;  
+
 }
 
 .hgame a {
@@ -78,14 +79,17 @@ body {
 	background-image: url(img/1.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
 }
 
 .menu-list {
 	display: flex;
 	justify-content: space-around;
-	padding-top: 10px;
 	font-size: 25px;
 	list-style-type: none;
+	position: relative;
+	top: -20px;
 }
 
 .menu-list a {
@@ -97,7 +101,11 @@ body {
 
 .menu {
 	background-color:gray;
-	height: 50px;
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	top: 10px;
+
 }
 
 .menu-list a:hover {
@@ -127,3 +135,101 @@ body {
 	}
 }
 
+#history {
+	margin-top: 150px;
+}
+
+#switch {
+	opacity: 0;
+
+}
+
+.menu_button {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 1;
+
+
+}
+
+.menu_button > span , .menu_button > span::before , .menu_button > span::after {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #616161;
+} 
+
+.menu_button > span::before {
+	content: '';
+	top: -8px;
+}
+
+
+.menu_button > span::after {
+	content: '';
+	top: 8px;
+}
+
+.menu-box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	left: -100%;
+	width: 40%;
+	height: 4%;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	background-color: lightgray;
+	box-shadow: 1px 0 6px black;
+	padding-top: 30px;
+	padding-bottom: 170px;
+	padding-right: 40px;
+
+}
+
+.menu-box li a {
+	display: block;
+	padding: 12px 24px;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.menu-box li a:hover {
+	background-color: gray;
+}
+
+#switch:checked ~ .menu_button > span  {
+	transform: rotate(45deg);
+}
+
+#switch:checked ~ .menu_button > span:before  {
+	top: 0;
+	transform: rotate(0);
+}
+
+#switch:checked ~ .menu_button > span:after {
+	top: 0;
+	transform: rotate(90deg);	
+}
+
+#switch:checked ~ .menu-box {
+	visibility: visible;
+	left: 0;
+}
+
+.menu-box {
+	transition-duration: .25s;
+}
+
+.menu-box li a {
+	transition-duration: .25s;
+}
